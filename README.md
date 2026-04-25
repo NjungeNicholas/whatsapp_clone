@@ -16,9 +16,9 @@ The app is structured as follows:
 
 * **Data Models**:
 
-    * `Chat`: Represents a single chat item in the chat list (sender, last message, timestamp, etc.).
+  * `Chat`: Represents a single chat item in the chat list (sender, last message, timestamp, etc.).
 
-    * `Message`: Represents a single message within a chat conversation (sender, text, timestamp).
+  * `Message`: Represents a single message within a chat conversation (sender, text, timestamp).
 
 ## Key Components and How They Work
 
@@ -38,13 +38,13 @@ The app is structured as follows:
 
 * It contains a `BottomNavigationBar` (or `NavigationBar` in Material 3) to allow users to switch between different sections of the app:
 
-    * Chats
+  * Chats
 
-    * Status
+  * Status
 
-    * Community
+  * Community
 
-    * Calls
+  * Calls
 
 * The `_selectedIndex` variable keeps track of the currently selected tab.
 
@@ -58,31 +58,31 @@ The app is structured as follows:
 
 * **Filters**:
 
-    * **All**: Shows all recent chats.
+  * **All**: Shows all recent chats.
 
-    * **Unread**: Shows chats with unread messages.
+  * **Unread**: Shows chats with unread messages.
 
-    * **Groups**: Shows group chats.
+  * **Groups**: Shows group chats.
 
-    * **Favorites**: Shows chats marked as favorites (in this case, chats with no unread messages, not groups and not locked).
+  * **Favorites**: Shows chats marked as favorites (in this case, chats with no unread messages, not groups and not locked).
 
-* **Archived Chats**: Displays a section for archived chats.
+  * **Archived Chats**: Displays a section for archived chats.
 
 * **Chat List**:
 
-    * Uses a `ListView.builder` to efficiently display the list of chats.
+  * Uses a `ListView.builder` to efficiently display the list of chats.
 
-    * Each chat item displays the sender's avatar, name, last message, and timestamp.
+  * Each chat item displays the sender's avatar, name, last message, and timestamp.
 
-    * Tapping on a chat item navigates the user to the `ChatScreen` for that conversation.
+  * Tapping on a chat item navigates the user to the `ChatScreen` for that conversation.
 
 * **Data Handling**:
 
-    * Uses a list of `Chat` objects (`sampleChats`) to represent the chat data.  In a real app, this data would come from a database or API.
+  * Uses a list of `Chat` objects (`sampleChats`) to represent the chat data.  In a real app, this data would come from a database or API.
 
 * **Dynamic UI**:
 
-    * The AppBar title and actions change based on the selected screen.
+  * The AppBar title and actions change based on the selected screen.
 
 ### 4\. `ChatScreen`
 
@@ -90,53 +90,53 @@ The app is structured as follows:
 
 * **Message List**:
 
-    * Uses a `ListView.builder` to display the list of messages.
+  * Uses a `ListView.builder` to display the list of messages.
 
-    * Each message displays the sender's name, text, and timestamp.
+  * Each message displays the sender's name, text, and timestamp.
 
-    * Messages are aligned to the left for other users and to the right for the current user.
+  * Messages are aligned to the left for other users and to the right for the current user.
 
 * **Message Input Area**:
 
-    * A `TextField` allows the user to type a message.
+  * A `TextField` allows the user to type a message.
 
-    * A send button sends the message, adds it to the list, and updates the UI.
+  * A send button sends the message, adds it to the list, and updates the UI.
 
 * **Data Handling**:
 
-    * Uses a list of `Message` objects (`sampleMessages`) to represent the message data for a single chat.
+  * Uses a list of `Message` objects (`sampleMessages`) to represent the message data for a single chat.
 
 * **Navigation**:
 
-    * The screen receives the chat name and avatar URL from the `ChatsScreen` when the user taps on a chat.
+  * The screen receives the chat name and avatar URL from the `ChatsScreen` when the user taps on a chat.
 
 ### 5\.  Data Models
 
 * **`Chat`**:
 
-    * Represents a single chat in the chat list.
+  * Represents a single chat in the chat list.
 
-    * Contains information like sender name, avatar URL, last message, timestamp, unread count, and flags for archived, locked, and group status.
+  * Contains information like sender name, avatar URL, last message, timestamp, unread count, and flags for archived, locked, and group status.
 
 * **`Message`**:
 
-    * Represents a single message within a chat conversation.
+  * Represents a single message within a chat conversation.
 
-    * Contains information like sender name, text, timestamp and a flag to indicate if the message is from the current user.
+  * Contains information like sender name, text, timestamp and a flag to indicate if the message is from the current user.
 
 ## How the App Works (User Flow)
 
-1.  The user opens the app, and `main.dart` launches the `WhatsAppHomeScreen`.
+1. The user opens the app, and `main.dart` launches the `WhatsAppHomeScreen`.
 
-2.  The `WhatsAppHomeScreen` displays the bottom navigation bar.
+2. The `WhatsAppHomeScreen` displays the bottom navigation bar.
 
-3.  The user sees the list of chats in the `ChatsScreen` by default.
+3. The user sees the list of chats in the `ChatsScreen` by default.
 
-4.  The user can tap on a chat item in the `ChatsScreen` to open the `ChatScreen` for that conversation.
+4. The user can tap on a chat item in the `ChatsScreen` to open the `ChatScreen` for that conversation.
 
-5.  In the `ChatScreen`, the user can see the message history and send new messages.
+5. In the `ChatScreen`, the user can see the message history and send new messages.
 
-6.  The user can use the bottom navigation bar to switch to other sections of the app (Status, Community, Calls).
+6. The user can use the bottom navigation bar to switch to other sections of the app (Status, Community, Calls).
 
 ## Further Development
 

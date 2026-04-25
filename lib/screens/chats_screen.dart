@@ -46,7 +46,7 @@ class Message {
 final List<Chat> sampleChats = [
   Chat(
     senderName: 'Eric',
-    senderAvatarUrl: 'https://i.pravatar.cc/300',
+    senderAvatarUrl: 'lib/assets/pexels-laker-5792641.jpg',
     lastMessage: 'Hey, how are you?',
     timestamp: DateTime.now().subtract(const Duration(minutes: 10)),
     unreadCount: 2,
@@ -67,7 +67,7 @@ final List<Chat> sampleChats = [
   ),
   Chat(
     senderName: 'Tabby',
-    senderAvatarUrl: 'https://i.pravatar.cc/300',
+    senderAvatarUrl: 'lib/assets/pexels-laker-5792641.jpg',
     lastMessage: 'Let\'s meet tommorow',
     timestamp: DateTime.now().subtract(const Duration(days: 2)),
     unreadCount: 0,
@@ -88,7 +88,7 @@ final List<Chat> sampleChats = [
   ),
   Chat(
     senderName: 'Victor',
-    senderAvatarUrl: 'https://i.pravatar.cc/300',
+    senderAvatarUrl: 'lib/assets/pexels-laker-5792641.jpg',
     lastMessage: 'Hey, how are you?',
     timestamp: DateTime.now().subtract(const Duration(minutes: 10)),
     unreadCount: 2,
@@ -109,7 +109,7 @@ final List<Chat> sampleChats = [
   ),
   Chat(
     senderName: 'Locked Chat',
-    senderAvatarUrl: 'https://i.pravatar.cc/300',
+    senderAvatarUrl: 'lib/assets/pexels-laker-5792641.jpg',
     lastMessage: 'Important message',
     timestamp: DateTime.now().subtract(const Duration(minutes: 5)),
     isLocked: true,
@@ -124,7 +124,7 @@ final List<Chat> sampleChats = [
   ),
   Chat(
     senderName: 'My Favorite Contact',
-    senderAvatarUrl: 'https://i.pravatar.cc/300',
+    senderAvatarUrl: 'lib/assets/pexels-laker-5792641.jpg',
     lastMessage: 'Lets go for lunch',
     timestamp: DateTime.now().subtract(const Duration(minutes: 20)),
     unreadCount: 0,
